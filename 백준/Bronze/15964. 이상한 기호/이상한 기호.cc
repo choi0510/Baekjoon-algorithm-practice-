@@ -1,16 +1,16 @@
 #include <iostream>
 using namespace std;
 
-int newCal(int num1, int num2)
+long long newCal(long long num1, long long num2)
 {
-	int result = (num1 + num2) * (num1 - num2);
+	long long result = (num1 + num2) * (num1 - num2);
 	return result;
 }
 
 int main() {
-	int num1, num2;
+	long long num1, num2;
 	cin >> num1 >> num2;
-	int result = newCal(num1, num2);
+	long long result = newCal(num1, num2);
 	cout << result;
 
 	return 0;
