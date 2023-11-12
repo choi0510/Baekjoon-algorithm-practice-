@@ -6,21 +6,23 @@ int main() {
 	ios::sync_with_stdio(false);
 	cin.tie(0);
 
-	int L;
-	int ch;
-	int sum = 0;
+	long long L;
+	long long ch;
+	long long sum = 0;
+	long long M = 1234567891;
 	string s;
 
 	cin >> L;
 	cin >> s;
 
-	for (int i = 0; i < L; i++) {
+	for (long long i = 0; i < L; i++) {
 		ch = (s[i] - 'a' + 1);
-		for (int j = 0; j < i; j++) {
+		for (long long j = 0; j < i; j++) {
 			ch *= 31;
+			ch %= M;
 		}
 		sum += ch;
 	}
 
-	cout << sum;
+	cout << sum % M;
 }
