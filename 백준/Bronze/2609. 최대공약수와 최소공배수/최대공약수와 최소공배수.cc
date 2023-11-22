@@ -1,5 +1,4 @@
 #include <iostream>
-#include <vector>
 using namespace std;
 
 int main() {
@@ -8,30 +7,27 @@ int main() {
 	cin.tie(0);
 
 	int n1, n2;
-	vector<int> v1;
-	vector<int> v2;
+	int M = 0;
 
 	cin >> n1 >> n2;
 
 	if (n1 > n2) {
-		for (int i = 1; i <= n2; i++) {
+		for (int i = n2; i > 0; i--) {
 			if (n1 % i == 0 && n2 % i == 0) {
-				v1.push_back(i);
+				M = i;
+				break;
 			}
 		}
 	}
 	else {
-		for (int i = 1; i <= n1; i++) {
+		for (int i = n1; i > 0; i--) {
 			if (n1 % i == 0 && n2 % i == 0) {
-				v1.push_back(i);
+				M = i;
+				break;
 			}
 		}
 	}
 
-	int M = v1[0];
-	for (int i = 0; i < v1.size(); i++) {
-		M = max(M, v1[i]);
-	}
 	cout << M << '\n';
 
 	for (int i = M; ;i += M) {
