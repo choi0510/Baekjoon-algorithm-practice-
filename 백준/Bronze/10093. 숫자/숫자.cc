@@ -9,8 +9,9 @@ int main() {
 	unsigned long long n1, n2;
 
 	cin >> n1 >> n2;
-	int min_n = min(n1, n2);
-	int max_n = max(n1, n2);
+
+	unsigned long long min_n = min(n1, n2);
+	unsigned long long max_n = max(n1, n2);
 	if (max_n - min_n < 2) {
 		cout << 0;
 	}
