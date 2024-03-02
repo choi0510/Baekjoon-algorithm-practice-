@@ -26,7 +26,7 @@ int main() {
 		cin >> M >> N >> x >> y;
 		int LCM = lcm(M, N);
 		for (int i = x; i <= LCM; i += M) {
-			int key = i % N;
+			/*int key = i % N;
 			if (key == 0) {
 				key = N;
 			}
@@ -34,7 +34,14 @@ int main() {
 				cout << i << '\n';
 				isR = true;
 				break;
+			}*/
+
+			if ((i - y) % N == 0) {
+				cout << i << '\n';
+				isR = true;
+				break;
 			}
+
 		}
 		if (!isR) {
 			cout << -1 << '\n';
