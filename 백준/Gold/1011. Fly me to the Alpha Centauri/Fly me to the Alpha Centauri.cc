@@ -3,7 +3,6 @@ using namespace std;
 
 long long T;
 long long s, e;
-long long ans;
 
 int main() {
 
@@ -24,15 +23,13 @@ int main() {
 		}
 
 		if (e - s == (key - 1) * (key - 1)) {
-			ans = (key - 1) * 2 - 1;
+			cout << (key - 1) * 2 - 1 << '\n';
 		}
 		else if (e - s <= ((key - 1) * (key - 1) + (key * key)) / 2) {
-			ans = (key - 1) * 2;
+			cout << (key - 1) * 2 << '\n';
 		}
 		else {
-			ans = (key * 2) - 1;
+			cout << (key * 2) - 1 << '\n';
 		}
-
-		cout << ans << '\n';
 	}
 }
